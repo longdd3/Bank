@@ -1,0 +1,36 @@
+a)A Bank Application
+
+Account that contains:
+¦ A private int data field named id for the account (default 0).
+¦ A private double data field named balance for the account (default 0).
+¦ A private double data field named annualInterestRate that stores the
+current interest rate (default 0). Assume all accounts have the same interest rate.
+¦ A private Date data field named dateCreated that stores the date when the
+account was created.
+¦ A no-arg constructor that creates a default account.
+¦ A constructor that creates an account with the specified id and initial balance.
+¦ The accessor and mutator methods for id, balance, and
+annualInterestRate.
+¦ The accessor method for dateCreated.
+¦ A method named getMonthlyInterestRate() that returns the monthly
+interest rate.
+¦ A method named getMonthlyInterest() that returns the monthly interest.
+¦ A method named withdraw that withdraws a specified amount from the
+account.
+¦ A method named deposit that deposits a specified amount to the account
+
+The method getMonthlyInterest() is to return monthly interest, not the interest rate. Monthly
+interest is balance * monthlyInterestRate. monthlyInterestRate is annualInterestRate / 12. Note that annualInterestRate is a percentage,
+e.g.,like 4.5%. You need to divide it by 100.)
+
+Look at the Account class Account.java and write a main method in a different class to briefly experiment with some instances of the Account class.
+
+Using the Account class as a base class, write two derived classes called SavingsAccount and CurrentAccount. A SavingsAccount object, in addition to the attributes of an Account object, should have an interest variable and a method which adds interest to the account. A CurrentAccount object, in addition to the attributes of an Account object, should have an overdraft limit variable. Ensure that you have overridden methods of the Account class as necessary in both derived classes.
+Now create a Bank class, an object of which contains an array of Account objects. Accounts in the array could be instances of the Account class, the SavingsAccount class, or the CurrentAccount class. Create some test accounts (some of each type).
+Write an update method in the bank class. It iterates through each account, updating it in the following ways: Savings accounts get interest added (via the method you already wrote); CurrentAccounts get a letter sent if they are in overdraft.
+The Bank class requires methods for opening and closing accounts, and for paying a dividend into each account.
+Hints:
+
+Note that the balance of an account may only be modified through the deposit(double) and withdraw(double) methods.
+The Account class should not need to be modified at all.
+Be sure to test what you have done after each step.
